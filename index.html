@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — DRR Bakery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-shell">
+
+  <div class="auth-photo">
+    <div class="auth-brandmark">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C9 6 7 8.5 7 11.5C7 14.5 9.2 17 12 17C14.8 17 17 14.5 17 11.5C17 8.5 15 6 12 2Z" fill="currentColor"/>
+        <path d="M6 20C6 17.7909 8.68629 16 12 16C15.3137 16 18 17.7909 18 20V21H6V20Z" fill="currentColor"/>
+      </svg>
+      <span>DRR Bakery</span>
+    </div>
+  </div>
+
+  <div class="auth-form-panel">
+    <div class="auth-form-wrap">
+
+      <h1 class="auth-heading">Welcome Back</h1>
+      <p class="auth-subheading">Please log in to continue</p>
+
+      <div class="form-alert" id="login-alert" role="alert"></div>
+
+      <form id="login-form" action="#" method="post" novalidate>
+
+        <div class="field-group">
+          <label for="email">Email Address</label>
+          <div class="field-control">
+            <input type="email" id="email" name="email" placeholder="Placeholder">
+          </div>
+          <p class="field-error" id="email-error"></p>
+        </div>
+
+        <div class="field-group">
+          <label for="password">Password</label>
+          <div class="field-control">
+            <input type="password" id="password" name="password" placeholder="Placeholder" data-has-toggle="true">
+            <button type="button" class="password-toggle" aria-label="Show password" data-toggle-target="password">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </button>
+          </div>
+          <p class="field-error" id="password-error"></p>
+          <p class="field-hint">It must be at least 8 characters, with uppercase, lowercase, a number, and a symbol.</p>
+        </div>
+
+        <div class="field-options-row">
+          <label class="checkbox-field">
+            <input type="checkbox" id="remember" name="remember">
+            Remember me
+          </label>
+          <a href="forgot-password.html">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+
+
+      </form>
+
+      <hr class="auth-divider">
+
+      <p class="auth-footer-link">No account yet? <a href="signup.html">Sign Up</a></p>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-client.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
